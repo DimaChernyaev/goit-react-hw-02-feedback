@@ -3,7 +3,7 @@ import Statistics from "./statistics/Statistics";
 import FeedbackButton from "./feedbackButton/FeedbackButton";
 import SectionTitle from "components/sectionTitle/SectionTitle";
 import NotificationMessage from "components/notificationMessage/NotificationMessage";
-// import changeBackgroundImage from "helpers/changeBackgroundImage";
+import changeBackgroundImage from "helpers/changeBackgroundImage";
 import css from './App.module.css'
 
 class App extends Component {
@@ -62,7 +62,8 @@ class App extends Component {
         const percentage = this.countPositiveFeedbackPercentage();
 
         return (
-        <div className={css.container__feedback}>
+        <div className={css.container__feedback} style={{backgroundImage: `linear-gradient(to right, rgba(47, 48, 58, 0.7), 
+        rgba(47, 48, 58, 0.9)), url(${changeBackgroundImage(percentage)})`}}>
                 <SectionTitle 
                     title={'Please leave feedback'}>
                     <FeedbackButton 
@@ -93,5 +94,3 @@ class App extends Component {
 export default App
 
 
-// style={{backgroundImage: `linear-gradient(to right, rgba(47, 48, 58, 0.7), 
-// rgba(47, 48, 58, 0.9)), url(${changeBackgroundImage(percentage)})`}}
