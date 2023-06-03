@@ -1,0 +1,40 @@
+.button__container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__fedback {
+    padding: 14px;
+    width: 120px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+
+    border: 3px solid blue;
+    border-radius: 40px;
+
+    transition: border-color 250ms linear, color 250ms linear;
+}
+
+
+.button__fedback:first-child:hover {
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+.button__fedback:nth-child(2):hover {
+    border-color: goldenrod;
+}
+
+.button__fedback:last-child:hover {
+    border-color: red;
+    color: red;
+}
