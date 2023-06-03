@@ -32,6 +32,7 @@
 
 .button__fedback:nth-child(2):hover {
     border-color: goldenrod;
+    color: goldenrod;
 }
 
 .button__fedback:last-child:hover {
