@@ -1,4 +1,5 @@
 import css from './Statastics.module.css'
+import PropTypes from 'prop-types';
 
 const Statistics = ({good, neutral, bad, onTotal, onPositivePercentage}) => {
     return ( 
@@ -10,6 +11,15 @@ const Statistics = ({good, neutral, bad, onTotal, onPositivePercentage}) => {
         <li>Positive feedback: {onPositivePercentage}%</li>
     </ul>
     )
+}
+
+
+Statistics.propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    onTotal: PropTypes.number.isRequired,
+    onPositivePercentage: PropTypes.string.isRequired,
 }
 
 export default Statistics
