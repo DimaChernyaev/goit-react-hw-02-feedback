@@ -13,35 +13,12 @@ class App extends Component {
         bad: 0,
     }
 
-    leaveFeedback = (event) => {
-        const { target } = event;
+leaveFeedback = (event) => {
+        const { name } = event.target;
 
-        switch (target.name) {
-            case 'good':
-                this.setState(prevState => {
-                return {
-                    good: prevState.good + 1
-                }
-            })
-                break;
-            case 'neutral':
-                this.setState(prevState => {
-                return {
-                    neutral: prevState.neutral + 1
-                }
-            })
-                break;
-            case 'bad':
-                this.setState(prevState => {
-                return {
-                    bad: prevState.bad + 1
-                }
-            })
-                break;
-        
-            default:
-                break;
-        }
+        this.setState(prevState => ({
+            [name]: prevState[name] + 1
+        }))
     }
 
     countTotalFeedback = () => {
